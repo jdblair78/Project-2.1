@@ -9,9 +9,9 @@ async function renderBooks(filter) {
     books = await getBooks()
   }
 
-  booksWrapper.classList.remove += ('books__loading')
+  booksWrapper.classList.remove('books__loading')
 
-  
+
   if (filter === 'LOW_TO_HIGH') {
       books.sort((a, b) => (a.salePrice || a.originalPrice) - (b.salePrice || b.originalPrice))
   }
